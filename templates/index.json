@@ -1,1 +1,226 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Baby Food","heading_size":"h0"}},"text":{"type":"text","settings":{"text":"Get the best baby food products here!","text_style":"body"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop Now","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","text","button"],"settings":{"image":"shopify:\/\/shop_images\/304841039_1417712625304208_4702979842661875990_n.jpg","image_overlay_opacity":40,"image_height":"medium","adapt_height_first_image":false,"desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"<p>NotunEra is for Baby<\/p>","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>A one-stop online shop to find imported and local baby items.<\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-2","full_width":true,"padding_top":40,"padding_bottom":40}},"featured_collection":{"type":"featured-collection","settings":{"title":"Top Selling Products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":3,"columns_desktop":3,"full_width":false,"show_view_all":true,"view_all_style":"outline","enable_desktop_slider":false,"color_scheme":"background-2","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":36}},"collage":{"type":"collage","blocks":{"collection-0":{"type":"collection","settings":{"collection":"frontpage"}},"product":{"type":"product","settings":{"product":"gerber-teethers-strawberry-apple-spinach-50g","second_image":false}},"collection-1":{"type":"collection","settings":{"collection":"frontpage"}}},"block_order":["collection-0","product","collection-1"],"settings":{"heading":"Multimedia collage","heading_size":"h2","desktop_layout":"left","mobile_layout":"collage","card_styles":"product-card-wrapper","color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"video":{"type":"video","settings":{"heading":"","heading_size":"h1","cover_image":"shopify:\/\/shop_images\/299241602_2227238600791568_8903134343296296877_n.jpg","video_url":"https:\/\/www.youtube.com\/watch?v=vmANrgIpZqU","description":"how-to-make-gerber-baby-food-cereal","full_width":false,"color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"multicolumn":{"type":"multicolumn","blocks":{"column1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/19227451551637042891-128.png","title":"Fast Delivery","text":"<p>We deliver within 24 hours<\/p>","link_label":"","link":""}},"column2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/12165379771636522824-128.png","title":"Original Product","text":"<p>You can buy all the authentic baby products here!<\/p>","link_label":"","link":""}},"column3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/10669827501582799499-128.png","title":"24x7 Customer Support","text":"<p>We are always available to assist you, just click the icon to contact us via our live chat!<\/p>","link_label":"Chat Now","link":"https:\/\/m.me\/notunera"}}},"block_order":["column1","column2","column3"],"settings":{"title":"","heading_size":"h1","image_width":"third","image_ratio":"adapt","columns_desktop":3,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["image_banner","rich_text","featured_collection","collage","video","multicolumn"]}
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Baby Food",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Get the best baby food products here!",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/304841039_1417712625304208_4702979842661875990_n.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ shop.brand.slogan }}<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ shop.brand.short_description }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Top Selling Products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-2",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "gerber-teethers-strawberry-apple-spinach-50g",
+            "second_image": false
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "product",
+        "collection-1"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "cover_image": "shopify:\/\/shop_images\/299241602_2227238600791568_8903134343296296877_n.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=vmANrgIpZqU",
+        "description": "how-to-make-gerber-baby-food-cereal",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/19227451551637042891-128.png",
+            "title": "Fast Delivery",
+            "text": "<p>We deliver within 24 hours<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/12165379771636522824-128.png",
+            "title": "Original Product",
+            "text": "<p>You can buy all the authentic baby products here!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/10669827501582799499-128.png",
+            "title": "24x7 Customer Support",
+            "text": "<p>We are always available to assist you, just click the icon to contact us via our live chat!<\/p>",
+            "link_label": "Chat Now",
+            "link": "https:\/\/m.me\/notunera"
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "video",
+    "multicolumn"
+  ]
+}
