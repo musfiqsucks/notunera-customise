@@ -495,9 +495,14 @@
                               checked
                             {% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+
+                          
+                          <label style= "background-image: url( {{ value | append:'.png' | file_url }} ) " for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                             {{ value }}
                           </label>
+
+
+                          
                         {%- endfor -%}
                       </fieldset>
                     {%- endfor -%}
