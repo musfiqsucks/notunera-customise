@@ -497,7 +497,7 @@
                           >
 
                             {% if option.name == 'Color' %}
-                          <label style= "background-image: url( {{ value | append:'.png' | file_url }} ) " for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          <label class="color-swatch" style= "background-image: url( {{ value | append:'.png' | file_url }} ) " for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
                           </label>
                               
                           {% else %}
