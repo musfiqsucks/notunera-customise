@@ -1245,8 +1245,13 @@ a.product__text {
   flex-shrink: 0;
 }
 
-.color-swatch{
+.product-form__input input[type=radio]+label.color-swatch{
     height: 40%;
     width: 40%;
     border-radius: 100%;
+}
+
+.product-form__input input[type=radio]:checked+label:.color-swatch{
+  box-shadow: 0 0 0 2px #000;
+  transition: .2s ease;
 }
