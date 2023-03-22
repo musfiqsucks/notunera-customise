@@ -1246,8 +1246,8 @@ a.product__text {
 }
 
 .product-form__input input[type=radio]+label.color-swatch{
-    height: 40%;
-    width: 40%;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
 }
 
