@@ -1256,7 +1256,7 @@ a.product__text {
     transition: box-shadow 0.2 ease;
 }
 
-.product-form__input input[type=radio]+label.color-swatch {
+.product-form__input input[type=radio]+label.color-swatch: before {
 content: "";
 border-radius: 100%;
 border: 2px solid #ffffff;
