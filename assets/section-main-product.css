@@ -1250,3 +1250,8 @@ a.product__text {
   width: 40px;
   border-radius: 100%;
 }
+
+.product-form__input input[type=radio]:checked +label.color-swatch {
+    box-shadow: 0 0 0 2px #000;
+    transition: box-shadow 0.2 ease;
+}
