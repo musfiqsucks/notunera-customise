@@ -607,6 +607,12 @@
            <label for="custom-text"> Your Custom Text </label>
             <input required type= "text" id="custom-text" form="{{ product_form_id }}" name="properties[Your Custom Text]" />
             </div>
+
+             <div> 
+           <label for="custom-gift"> Wrap up as a gift? </label>
+            <input required type= "checkbox" id="custom-gift" form="{{ product_form_id }}" name="properties[Custom Gift]" />
+            </div>
+
                  
             {%- when 'buy_buttons' -%}
               <div {{ block.shopify_attributes }}>
