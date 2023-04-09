@@ -476,6 +476,8 @@
                 </details>
               </share-button>
               <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+Your Custom Text
+            
             {%- when 'variant_picker' -%}
               {%- unless product.has_only_default_variant -%}
                 {%- if block.settings.picker_type == 'button' -%}
@@ -525,7 +527,7 @@
                     data-url="{{ product.url }}"
                     {{ block.shopify_attributes }}
                   >
-                    Your Custom Text
+                    
                     {%- for option in product.options_with_values -%}
                       <div class="product-form__input product-form__input--dropdown">
                         <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
