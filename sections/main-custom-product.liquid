@@ -603,7 +603,10 @@
                 </div>
               </noscript>
 
-            Your Custom Text
+            <div> 
+           <label for="custom-text"> Your Custom Text </label>
+            <input required type= "text" id="custom-text" form="{{ product_form_id }}" name="properties[Your Custom Text]" />
+            </div>
                  
             {%- when 'buy_buttons' -%}
               <div {{ block.shopify_attributes }}>
