@@ -476,7 +476,7 @@
                 </details>
               </share-button>
               <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
-Your Custom Text
+
             
             {%- when 'variant_picker' -%}
               {%- unless product.has_only_default_variant -%}
@@ -603,7 +603,8 @@ Your Custom Text
                 </div>
               </noscript>
 
-
+            Your Custom Text
+                 
             {%- when 'buy_buttons' -%}
               <div {{ block.shopify_attributes }}>
                 <product-form class="product-form">
