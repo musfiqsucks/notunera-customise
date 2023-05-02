@@ -624,9 +624,10 @@
           </div>
         {%- endif -%}
       </a>
+                    
+    </div>
 
-
-      <!-- Custom search form -->
+    <!-- Custom search form -->
 <form id="custom-search-form" method="get" action="{{ routes.search_url }}" role="search">
   <input type="text" id="field1" placeholder="Field 1">
   <span>x</span>
@@ -650,8 +651,7 @@
     document.getElementById('search-query').value = searchQuery;
     event.currentTarget.submit();
   });
-</script>                  
-    </div>
+</script>
   
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
