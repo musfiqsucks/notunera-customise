@@ -517,33 +517,6 @@
     {%- endif -%}
 
     <div class="header__icons">
-
-    <!-- Custom search form -->
-<form id="custom-search-form" method="get" action="{{ routes.search_url }}" role="search">
-  <input type="text" id="field1" placeholder="Field 1">
-  <span>x</span>
-  <input type="text" id="field2" placeholder="Field 2">
-  <span>x</span>
-  <input type="text" id="field3" placeholder="Field 3">
-  <input type="hidden" id="search-query" name="q">
-  <button type="submit">Search</button>
-</form>
-
-<!-- JavaScript to handle the custom search form submission -->
-<script>
-  document.getElementById('custom-search-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const field1 = document.getElementById('field1').value;
-    const field2 = document.getElementById('field2').value;
-    const field3 = document.getElementById('field3').value;
-    const searchQuery = field1 + 'x' + field2 + 'x' + field3;
-
-    document.getElementById('search-query').value = searchQuery;
-    event.currentTarget.submit();
-  });
-</script>
-
       
       <details-modal class="header__search">
         <details>
@@ -651,7 +624,35 @@
           </div>
         {%- endif -%}
       </a>
+
+
+      <!-- Custom search form -->
+<form id="custom-search-form" method="get" action="{{ routes.search_url }}" role="search">
+  <input type="text" id="field1" placeholder="Field 1">
+  <span>x</span>
+  <input type="text" id="field2" placeholder="Field 2">
+  <span>x</span>
+  <input type="text" id="field3" placeholder="Field 3">
+  <input type="hidden" id="search-query" name="q">
+  <button type="submit">Search</button>
+</form>
+
+<!-- JavaScript to handle the custom search form submission -->
+<script>
+  document.getElementById('custom-search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const field1 = document.getElementById('field1').value;
+    const field2 = document.getElementById('field2').value;
+    const field3 = document.getElementById('field3').value;
+    const searchQuery = field1 + 'x' + field2 + 'x' + field3;
+
+    document.getElementById('search-query').value = searchQuery;
+    event.currentTarget.submit();
+  });
+</script>                  
     </div>
+  
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
