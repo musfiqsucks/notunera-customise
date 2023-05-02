@@ -54,7 +54,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>{{ shop.brand.slogan }}<\/p>",
+            "heading": "<p>Always the Best<\/p>",
             "heading_size": "h1"
           }
         },
