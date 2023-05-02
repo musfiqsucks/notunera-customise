@@ -518,31 +518,29 @@
 
     <div class="header__icons">
 
-      <div class="col-kartonsuche" id="kartonsuche">
-  <form onsubmit="onSubmit(event)" class="dpflex-a-center" action="{{ routes.search_url }}" method="get" role="search" class="search-form">
-    <input type="text" id="field1" placeholder="Field 1">
-    <span>×</span>
-    <input type="text" id="field2" placeholder="Field 2">
-    <span>×</span>
-   <input type="text" id="field3" placeholder="Field 3">
-    <span>=</span>
-    <button type="submit" class="btn btn-primary btn-sm btn-kartonfinder submit">Box Search</button>
-  </form>
+    <!-- Custom search form -->
+<form id="custom-search-form" method="get" action="{{ routes.search_url }}" role="search">
+  <input type="text" id="field1" placeholder="Field 1">
+  <input type="text" id="field2" placeholder="Field 2">
+  <input type="text" id="field3" placeholder="Field 3">
+  <input type="hidden" id="search-query" name="q">
+  <button type="submit">Search</button>
+</form>
 
-        <script>
-    function onSubmit(event) {
-      event.preventDefault();
+<!-- JavaScript to handle the custom search form submission -->
+<script>
+  document.getElementById('custom-search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-      const field1 = document.getElementById('field1').value;
-      const field2 = document.getElementById('field2').value;
-      const field3 = document.getElementById('field3').value;
+    const field1 = document.getElementById('field1').value;
+    const field2 = document.getElementById('field2').value;
+    const field3 = document.getElementById('field3').value;
+    const searchQuery = field1 + 'x' + field2 + 'x' + field3;
 
-      const result = field1 + 'x' + field2 + 'x' + field3;
-
-     
-    }
-  </script>
-</div>
+    document.getElementById('search-query').value = searchQuery;
+    event.currentTarget.submit();
+  });
+</script>
 
       
       <details-modal class="header__search">
