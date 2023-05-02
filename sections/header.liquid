@@ -519,12 +519,12 @@
     <div class="header__icons">
 
       <div class="col-kartonsuche" id="kartonsuche">
-  <form class="dpflex-a-center" method="get" action="/Kartonsuche?post=ks">
-    <input type="text" class="data-hj-whitelist form-control input-sm" size="10" placeholder="length (mm)" id="laenge" name="laenge" value="250">
+  <form class="dpflex-a-center" action="{{ routes.search_url }}" method="get" role="search">
+    <input type="text" class="data-hj-whitelist form-control input-sm" size="10" placeholder="length (mm)" id="laenge" name="laenge" value="">
     <span>×</span>
-    <input class="data-hj-whitelist form-control input-sm" size="10" placeholder="width (mm)" id="breite" type="text" name="breite" value="200">
+    <input class="data-hj-whitelist form-control input-sm" size="10" placeholder="width (mm)" id="breite" type="text" name="breite" value="">
     <span>×</span>
-    <input class="data-hj-whitelist form-control input-sm" size="10" placeholder="height (mm)" id="hoehe" type="text" name="hoehe" value="150">
+    <input class="data-hj-whitelist form-control input-sm" size="10" placeholder="height (mm)" id="hoehe" type="text" name="hoehe" value="">
     <span>=</span>
     <button class="btn btn-primary btn-sm btn-kartonfinder submit">box search</button>
   </form>
