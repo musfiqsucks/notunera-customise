@@ -626,7 +626,9 @@
       </a>
                     
     </div>
-<!-- uday 
+
+{%- comment -%}                    
+<!-- uday -->
     <!-- Custom search form -->
 <form id="custom-search-form" method="get" action="{{ routes.search_url }}" role="search">
   <input type="text" id="field1" placeholder="Field 1">
@@ -651,7 +653,9 @@
     document.getElementById('search-query').value = searchQuery;
     event.currentTarget.submit();
   });
-</script>  -->
+</script> 
+<!-- uday -->
+{%- endcomment -%}    
   
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
