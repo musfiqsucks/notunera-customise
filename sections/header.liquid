@@ -626,17 +626,17 @@
       </a>
                     
     </div>
-
+<!-- uday 
     <!-- Custom search form -->
 <form id="custom-search-form" method="get" action="{{ routes.search_url }}" role="search">
   <input type="text" id="field1" placeholder="Field 1">
   <span>x</span>
   <input type="text" id="field2" placeholder="Field 2">
   <span>x</span>
- <span> <input type="text" id="field3" placeholder="Field 3"> </span>
+  <input type="text" id="field3" placeholder="Field 3">
   <input type="hidden" id="search-query" name="q">
   <button type="submit">Search</button>
-</form>
+</form> 
 
 <!-- JavaScript to handle the custom search form submission -->
 <script>
@@ -651,7 +651,7 @@
     document.getElementById('search-query').value = searchQuery;
     event.currentTarget.submit();
   });
-</script>
+</script>  -->
   
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
