@@ -113,6 +113,33 @@
                               <dt>{{ option.name }}: </dt>
                               <dd>{{ option.value }}</dd>
                             </div>
+
+
+                        {% assign orderTotal = cart.total_price %}
+{% if orderTotal >= 110000 %}
+  {% assign freeProductAdded = false %}
+  {% for item in cart.items %}
+    {% if item.variant.price == 0 %}
+      {% assign freeProductAdded = true %}
+    {% endif %}
+  {% endfor %}
+  {% unless freeProductAdded %}
+    {% assign freeProduct = all_products['free-product-handle'] %}
+    {% if freeProduct %}
+      {% assign freeProductVariant = freeProduct.variants.first %}
+      <tr class="cart-item" id="FreeProduct">
+        <td colspan="5" class="cart-item__free-product">
+          <input type="hidden" name="items[]" value="{{ freeProductVariant.id }}:1">
+          <div class="cart-item__details">
+            <a href="{{ freeProduct.url }}" class="cart-item__name h4 break">{{ freeProduct.title }}</a>
+            <div class="product-option">{{ freeProductVariant.price | money }}</div>
+          </div>
+        </td>
+      </tr>
+    {% endif %}
+  {% endunless %}
+{% endif %}
+
                           {%- endfor -%}
                         {%- endif -%}
 
@@ -147,19 +174,6 @@
                       {%- endfor -%}
                     </ul>
                   </td>
-
-                  {% if cart.total_price >= 1100 %}
-  {% assign freeProduct = false %}
-  {% for item in cart.items %}
-    {% if item.variant.product.price == 0 %}
-      {% assign freeProduct = true %}
-    {% endif %}
-  {% endfor %}
-  {% unless freeProduct %}
-    <input type="hidden" name="updates[]" value="1" />
-    <input type="hidden" name="id" value="{{ free_product_variant_id }}" />
-  {% endunless %}
-{% endif %}
 
                   <td class="cart-item__totals right medium-hide large-up-hide">
                     <div class="loading-overlay hidden">
