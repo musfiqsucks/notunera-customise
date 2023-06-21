@@ -293,6 +293,53 @@
       }
     </script>
 
+    <script>
+  (function() {
+    function addFreeProductToCart() {
+      var cartTotal = {{ cart.total_price | divided_by: 100 }};
+      var freeProductHandle = '8125782655273'; // Replace with the handle of the free product
+
+      if (cartTotal >= 1100) {
+        var isFreeProductAdded = false;
+
+        // Check if free product is already in the cart
+        {{ cart.items | json }}.forEach(function(item) {
+          if (item.handle === freeProductHandle) {
+            isFreeProductAdded = true;
+          }
+        });
+
+        if (!isFreeProductAdded) {
+          var formData = new FormData();
+          formData.append('id', freeProductHandle + ':1');
+
+          fetch('/cart/add.js', {
+            method: 'POST',
+            body: formData,
+          })
+          .then(function(response) {
+            if (response.ok) {
+              window.location.reload(); // Reload the page to reflect the updated cart
+            } else {
+              console.error('Error adding free product to cart');
+            }
+          })
+          .catch(function(error) {
+            console.error('Error adding free product to cart:', error);
+          });
+        }
+      }
+    }
+
+    // Add free product to cart on page load
+    addFreeProductToCart();
+
+    // Listen for changes in the cart (e.g., item added/removed) and add free product if necessary
+    document.addEventListener('cart:updated', addFreeProductToCart);
+  })();
+</script>
+
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
