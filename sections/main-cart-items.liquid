@@ -148,6 +148,19 @@
                     </ul>
                   </td>
 
+                  {% if cart.total_price >= 110000 %}
+  {% assign freeProduct = false %}
+  {% for item in cart.items %}
+    {% if item.variant.product.price == 0 %}
+      {% assign freeProduct = true %}
+    {% endif %}
+  {% endfor %}
+  {% unless freeProduct %}
+    <input type="hidden" name="updates[]" value="1" />
+    <input type="hidden" name="id" value="{{ free_product_variant_id }}" />
+  {% endunless %}
+{% endif %}
+
                   <td class="cart-item__totals right medium-hide large-up-hide">
                     <div class="loading-overlay hidden">
                       <div class="loading-overlay__spinner">
