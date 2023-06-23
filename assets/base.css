@@ -2960,7 +2960,7 @@ details-disclosure > details {
 
 @media (prefers-color-scheme: dark) {
   /* Styles for dark mode */
-  body {
+  html {
     background-color: #1e1e1e;
     color: #ffffff;
   }
