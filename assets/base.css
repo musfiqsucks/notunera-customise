@@ -2957,3 +2957,11 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  /* Styles for dark mode */
+  body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+}
