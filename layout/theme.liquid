@@ -339,6 +339,18 @@
   })();
 </script>
 
+<script>
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (prefersDarkMode) {
+  // Apply dark mode styles
+  document.body.classList.add('dark-mode');
+} else {
+  // Apply light mode styles
+  document.body.classList.remove('dark-mode');
+}
+</script>
+
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
