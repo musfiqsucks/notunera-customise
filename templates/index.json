@@ -1,15 +1,5 @@
 {
   "sections": {
-    "announcement_barcustom_EjczMQ": {
-      "type": "announcement-barcustom",
-      "settings": {
-        "announcement_text": "Storewide discount 40%",
-        "background_color": "#eef2e6",
-        "text_color": "#b72a2a",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -226,7 +216,6 @@
     }
   },
   "order": [
-    "announcement_barcustom_EjczMQ",
     "image_banner",
     "rich_text",
     "featured_collection",
