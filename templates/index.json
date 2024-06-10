@@ -213,6 +213,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "imagewith_textcustom_qRrCtE": {
+      "type": "imagewith-textcustom",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/puff3-1_2f4515d0-cde7-482a-87e0-bcc3e2e5f739.jpg",
+        "image_alt": "Minerals",
+        "heading": "Nutrition",
+        "text": "<p>A brief introduction<\/p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -221,6 +232,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "imagewith_textcustom_qRrCtE"
   ]
 }
