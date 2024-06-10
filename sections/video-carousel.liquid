@@ -1,6 +1,80 @@
+{% stylesheet %}
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.carousel-video:last-child {
+  margin-bottom: 0;
+}
+{% endstylesheet %}
+
+<div class="video-carousel-container section-{{ section.id }}-padding">
+  <div class="carousel-container">
+    {%- for video in videos -%}
+      <div class="carousel-video">
+        <video src="{{ video.url }}" autoplay loop muted controls></video>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Video Carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Add up to 3 video URLs"
+    },
+    {
+      "type": "url",
+      "id": "video_1",
+      "label": "Video 1 URL"
+    
+    },
+    {
+      "type": "url",
+      "id": "video_2",
+      "label": "Video 2 URL"
+
+    },
+    {
+      "type": "url",
+      "id": "video_3",
+      "label": "Video 3 URL"
+
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Carousel"
+    }
+  ]
+}
 {% endschema %}
+
+{% assign videos = '' %}
+{% if section.settings.video_1 != blank %}
+  {% assign videos = videos | append: '{"url": "' | append: section.settings.video_1 | append: '"}' %}
+{% endif %}
+{% if section.settings.video_2 != blank %}
+  {% if videos != '' %}
+    {% assign videos = videos | append: ',' %}
+  {% endif %}
+  {% assign videos = videos | append: '{"url": "' | append: section.settings.video_2 | append: '"}' %}
+{% endif %}
+{% if section.settings.video_3 != blank %}
+  {% if videos != '' %}
+    {% assign videos = videos | append: ',' %}
+  {% endif %}
+  {% assign videos = videos | append: '{"url": "' | append: section.settings.video_3 | append: '"}' %}
+{% endif %}
+{% assign videos = '[' | append: videos | append: ']' %}
+{% assign videos = videos | parse_json %}
