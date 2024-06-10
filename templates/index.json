@@ -213,6 +213,14 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video_carousel_AarWX7": {
+      "type": "video-carousel",
+      "settings": {
+        "video_1": "https:\/\/ugceer.com\/wp-content\/uploads\/2024\/01\/download-9.mp4",
+        "video_2": "https:\/\/ugceer.com\/wp-content\/uploads\/2024\/01\/download-9.mp4",
+        "video_3": "https:\/\/ugceer.com\/wp-content\/uploads\/2024\/01\/download-9.mp4"
+      }
     }
   },
   "order": [
@@ -221,6 +229,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "video_carousel_AarWX7"
   ]
 }
